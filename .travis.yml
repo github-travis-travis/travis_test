@@ -8,3 +8,5 @@ addons:
 
 script:
   - sudo make
+  - tests
+  - tests-bash-scripts
