@@ -5,13 +5,14 @@
 #include "namei.h"
 
 int init_superblock(void) {
+	
 	struct data_block block;
 	if(read_block(0, &block.block)) {
 		fprintf(stderr, "Failed to read superblock\n");
 		return -1;
 	}
 
-	memcpy(&superblock, &block.block, sizeof(struct superblock));
+	memcpy(superblock, &block.block, sizeof(struct superblock));
 	return 0;
 }
 
