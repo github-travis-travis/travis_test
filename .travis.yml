@@ -8,3 +8,6 @@ addons:
 
 script:
   - sudo make
+  
+after_failure:
+  - cat MSBuild_*.failure.txt
