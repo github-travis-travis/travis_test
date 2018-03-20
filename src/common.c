@@ -12,7 +12,7 @@ int init_superblock(void) {
 		return -1;
 	}
 
-	memcpy(superblock, &block.block, sizeof(struct superblock));
+	memcpy(&superblock, &block.block, sizeof(struct superblock));
 	return 0;
 }
 
