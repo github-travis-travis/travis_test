@@ -26,7 +26,8 @@ int write_block_offset(big_int block_id, void *buffer, size_t buffer_size, int o
 		return -1;
 	}
 
-	char *target = malloc(sizeof(char) * BLOCK_SIZE);
+	//char *target = malloc(sizeof(char) * BLOCK_SIZE);
+	char *target;
 	read_block(block_id, target);
 	memcpy(target + offset, buffer, buffer_size);
 	write_block(block_id, target, BLOCK_SIZE);
